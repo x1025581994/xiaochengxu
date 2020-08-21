@@ -1,0 +1,16 @@
+<view class="home_info" wx:for="{{informationDates}}" wx:for-index="key"  wx:for-item="informationDate" wx:key="index">
+  <view class="home_info_div">
+    <view class="home_info_div_img">
+        <image style="width:100%"  src="{{informationDate.mainImg}}"></image>
+    </view>
+    <label class="home_info_div_title">{{informationDate.title}}</label>
+    <label class="home_info_div_desc">{{informationDate.desc}}</label>
+    <view class="home_info_div_buttom">
+    <view class="home_info_div_author">{{informationDate.author}}</view>
+    <view class="home_info_div_collect">
+      <image class="home_info_div_collect" src="../../images/sc_1.png"></image>
+      <view>{{informationDate.collect}}</view>
+    </view>
+    </view>
+  </view>
+</view>

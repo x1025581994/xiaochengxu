@@ -1,0 +1,84 @@
+<!--login.wxml-->
+<!-- <view wx:if="{{canIUse}}">
+  <view class='header'>
+    <image src='/assets/tasks_icon/check.png'></image>
+  </view>
+  <view class='content'>
+    <view>申请获取以下权限</view>
+    <text>获得你的公开信息(昵称，头像等)</text>
+  </view>
+  <button class='bottom' type='primary' open-type="getPhoneNumber" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+    授权登录
+  </button>
+</view>
+<view wx:else>请升级微信版本</view> -->
+
+<!--miniprogram/pages/booking/booking.wxml-->
+<view class="booking_div">
+  <view class="booking_div_user">
+    <view class="booking_div_user_left">
+      <!-- <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data> -->
+      <image src="../../images/head.png"></image>
+    </view>
+    <view class="booking_div_user_right">
+      <view class="booking_div_user_right_name">
+        <image src="../../images/name.png"></image>
+        <view>
+          <text>游客</text>
+        </view>
+      </view>
+      <view class="booking_div_user_right_phone">
+        <image src="../../images/phone.png"></image>
+        <view>
+          <text>{{phone}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+<view class="input_model">
+    <view class="input_label_model">
+      <view class="input_label_model_left">
+        <label class="input_label_model_left_text">门店地址</label>
+      </view>
+      <view class="input_label_model_right">
+        <label class="input_label_model_right_text">{{serviceAddress}}</label>
+        <!-- <image class="input_label_model_right_img" src="../../images/down_4.png"></image> -->
+      </view>
+    </view>
+
+    <view class="input_label_model" bindtap="actionSheetbindchange">
+      <view class="input_label_model_left">
+        <label class="input_label_model_left_text">服务类型</label>
+      </view>
+      <view class="input_label_model_right">
+        <label class="input_label_model_right_text">{{serviceName}}</label>
+        <image class="input_label_model_right_img" src="../../images/down_4.png"></image>
+      </view>
+    </view>
+
+    <view class="input_label_model">
+      <view class="input_label_model_left">
+        <label class="input_label_model_left_text">服务时间</label>
+      </view>
+      <view class="input_label_model_right">
+        <label class="input_label_model_right_text">{{serviceTime}}</label>
+        <image class="input_label_model_right_img" src="../../images/down_4.png"></image>
+      </view>
+    </view>
+    <view class="input_label_model_textarea">
+      <textarea placeholder="备注" value="{{desc}}" />
+    </view>
+  </view>
+</view>
+<view class="booking_button">
+    <button bindtap="insertBookingData">确定预约</button>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for-items="{{serviceDate}}" wx:key="index">
+        <action-sheet-item bindtap="selectServiceItem" data-text="{{item.name}}">{{item.name}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

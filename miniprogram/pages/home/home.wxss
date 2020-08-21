@@ -1,0 +1,54 @@
+/* miniprogram/pages/home/home.wxss */
+.home_info{
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  margin: auto;
+}
+.home_info_div{
+  width: 680rpx;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 25rpx;
+  background:white;
+  box-shadow: 5rpx 20rpx 50rpx #888888;
+  padding-bottom: 40rpx;
+}
+
+.home_info_div_img image{
+  width: 680rpx;
+  height: 500rpx;
+  border-top-left-radius:25rpx;
+  border-top-right-radius:25rpx;
+}
+.home_info_div_title{
+  display: block;
+  /* text-align: center; */
+  margin: 100rpx 0rpx 60rpx 60rpx;
+  font-size: 60rpx;
+  font-weight:bold;
+}
+.home_info_div_desc{
+  display: block;
+  font-size: 38rpx;
+  margin-bottom: 40rpx;
+  margin-left:  60rpx;
+}
+.home_info_div_author{
+  font-size: 35rpx;
+  margin-bottom: 40rpx;
+}
+.home_info_div_buttom{
+  margin: 20rpx 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.home_info_div_collect{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.home_info_div_collect{
+  width: 70rpx;
+  height: 70rpx;
+}
